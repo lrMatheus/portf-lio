@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matheus - Portfólio</title>
+   
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <!-- perfil-->
+    <header class="netflix-header">
+        <div class="container d-flex flex-column flex-md-row align-items-center">
+            <div class="header-profile-group d-flex flex-column flex-sm-row align-items-center text-center text-sm-start me-md-auto">
+                <img id="img-perfil" src="fotos/Imagem do WhatsApp de 2025-05-23 à(s) 13.53.47_96c8ccdc.jpg" alt="Foto de Matheus" class="profile-pic mb-3 mb-sm-0 me-sm-4">
+                <div class="header-text-group text-start">
+                    <h1 class="netflix-title">Matheus Gomes</h1>
+                    <p class="header-about-me mt-2 mb-0">
+                        Desenvolvedor Back-End | Python<br>
+                        Sou apaixonado por transformar problemas em soluções eficientes. Possuo experiência prática em Python, MySQL, APIs, HTML e CSS, adquirida por meio de projetos pessoais, sempre focando na aplicação de boas práticas de desenvolvimento e organização de código.<br>
+                        Atualmente, estou expandindo meus conhecimentos em Data Science e Inteligência Artificial.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+ <!-- carrosel-->
+    <section class="netflix-banner container-fluid px-0">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+     <!-- imagem do carrosel-->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="projetos/tela de cadastro-produto.png" class="d-block w-100 banner-img" alt="Sistema de Mercadinho">
+                    <div class="carousel-caption d-flex flex-column justify-content-end align-items-start h-100 text-start">
+                        <h2 class="project-title animate-text-entry">Sistema de Gestão de Mercadinho</h2>
+                        <p class="project-description animate-text-entry delay-1">Um sistema completo para controle de estoque, vendas e gestão de clientes, otimizando operações diárias.</p>
+                        <a href="https://github.com/lrMatheus/sitema_mercado" target="_blank" class="btn netflix-button animate-text-entry delay-2">Ver Projeto</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="projetos/fake_pinterests.png" class="d-block w-100 banner-img" alt="Análise de Dados">
+                    <div class="carousel-caption d-flex flex-column justify-content-end align-items-start h-100 text-start">
+                        <h2 class="project-title animate-text-entry">Replica do Pinterest</h2>
+                        <p class="project-description animate-text-entry delay-1">Uma réplica funcional do Pinterest com sistema de posts e perfis.</p>
+                        <a href="https://fake-pinterest-1899.onrender.com/perfil/1" target="_blank" class="btn netflix-button animate-text-entry delay-2">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+     <!-- area de projetos -->
+    <main class="container-fluid netflix-sections">
+        <section class="mb-5">
+            <h3 class="section-title">Meus Projetos</h3>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="project-card detailed-project-card">
+                        <img src="projetos/tela de cadastro-produto.png" class="card-img-top" alt="Sistema de Mercadinho">
+                        <div class="card-body">
+                            <h5 class="card-title">Sistema de mercadinho</h5>
+                            <p class="card-text-short">Sistema desktop para gestão de mercadinho, com interface gráfica em abas. Permite cadastrar, consultar, editar e excluir produtos, categorias, fornecedores, clientes, pedidos e vendas. Utiliza MySQL e arquitetura modular orientada a serviços e modelos, garantindo organização e escalabilidade.</p>
+                            <p><strong>Tecnologias:</strong> Python, CustomTkinter, Tkinter, SQLAlchemy, MySQL.</p>
+                            <a href="https://github.com/lrMatheus/sitema_mercado" target="_blank" class="btn btn-sm netflix-button-small">Ver Projeto</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="project-card detailed-project-card">
+                        <img src="projetos/fake_pinterests.png" class="card-img-top" alt="Fakepinterst">
+                        <div class="card-body">
+                            <h5 class="card-title">Réplica do Pinterest</h5>
+                            <p class="card-text-short">Réplica funcional do Pinterest desenvolvida como projeto full-stack. A aplicação permite que usuários criem perfis, compartilhem posts com imagens e explorem conteúdos de outros usuários.</p>
+                            <p><strong>Tecnologias:</strong> Python (Flask), SQLAlchemy, PostgreSQL, Cloudinary, HTML, CSS.</p>
+                            <a href="https://fake-pinterest-1899.onrender.com/perfil/1" target="_blank" class="btn btn-sm netflix-button-small">Ver Projeto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+ <!-- area de habilidades -->
+        <section class="mb-5">
+            <h3 class="section-title">Minhas Habilidades</h3>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3">
+                <div class="col">
+                    <div class="skill-card text-center p-3">
+                        <i class="fab fa-python skill-icon"></i>
+                        <p class="skill-name mt-2">Python</p>
+                        <span class="skill-level">Intermediário</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="skill-card text-center p-3">
+                        <i class="fab fa-js-square skill-icon"></i>
+                        <p class="skill-name mt-2">JavaScript</p>
+                        <span class="skill-level">Básico</span>
+                    </div>
+                </div>
+                 <div class="col">
+                    <div class="skill-card text-center p-3">
+                        <i class="fa-solid fa-code skill-icon"></i>
+                        <p class="skill-name mt-2">CSS/html</p>
+                        <span class="skill-level">Intermediário</span>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="skill-card text-center p-3">
+                        <i class="fa-solid fa-code skill-icon"></i> <p class="skill-name mt-2">APIs</p>
+                        <span class="skill-level">Básico</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="skill-card text-center p-3">
+                        <i class="fa-solid fa-database skill-icon"></i>
+                        <p class="skill-name mt-2">Banco de Dados</p>
+                        <span class="skill-level">Básico-Intermediário</span>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="skill-card text-center p-3">
+                        <i class="fa-brands fa-git-alt skill-icon"></i>
+                        <p class="skill-name mt-2">Git / GitHub</p>
+                        <span class="skill-level">Intermediário</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="skill-card text-center p-3">
+                        <i class="fa-solid fa-brain skill-icon"></i> <p class="skill-name mt-2">Inteligência Artificial</p>
+                        <span class="skill-level">(em aprendizagem)</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="skill-card text-center p-3">
+                        <i class="fa-solid fa-flask skill-icon"></i>
+                        <p class="skill-name mt-2">Flask</p>
+                        <span class="skill-level">Básico</span>
+                    </div>
+                </div>
+                
+                </div>
+        </section>
+
+ <!-- area de certificados -->
+        <section class="mb-5">
+            <h3 class="section-title">Certificados</h3>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="project-card certificate-card">
+                        <img src="certificados/python/fundamentos.png" class="card-img-top" alt="Certificado Python">
+                        <div class="card-body">
+                            <h5 class="card-title">Python</h5>
+                            <p class="card-text-short">Fundamentos, manipulação de arquivos, POO, introdução a Django. <br>Carga Horária Total: <strong>34h</strong></p>
+                            <a href="certificado.html" target="_blank" class="btn btn-sm netflix-button-small">Ver Certificados da Área</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="project-card certificate-card">
+                        <img src="certificados/inicinate_em_programaçao.png" class="card-img-top" alt="Certificado Iniciante em Programação">
+                        <div class="card-body">
+                            <h5 class="card-title">Iniciante em Programação</h5>
+                            <p class="card-text-short">Lógica de Programação com Python, Git e GitHub, HTML e CSS, além de introdução à Inteligência Artificial.<br>Carga Horária Total: <strong>76h</strong></p>
+                            <a href="certificado.html" target="_blank" class="btn btn-sm netflix-button-small">Ver Certificados da Área</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="project-card certificate-card">
+                        <img src="certificados/html-css/fundamentos em html-css.png" class="card-img-top" alt="Certificado HTML/CSS">
+                        <div class="card-body">
+                            <h5 class="card-title">HTML/CSS</h5>
+                            <p class="card-text-short">Estruturas de conteúdo, semântica, tags, formulários, tabelas, flexbox, grid, display, variáveis CSS e responsividade.<br>Carga Horária Total: <strong>36h</strong></p>
+                            <a href="certificado.html" target="_blank" class="btn btn-sm netflix-button-small">Ver Certificados da Área</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="project-card certificate-card">
+                        <img src="certificados/Js/js_anvaçado.png" class="card-img-top" alt="Certificado HTML/CSS">
+                        <div class="card-body">
+                            <h5 class="card-title">Java Script</h5>
+                            <p class="card-text-short">Sintaxe e variáveis, operadores, funções, manipulação de arrays, DOM, eventos e JSON.<br>Carga Horária Total: <strong>36h</strong></p>
+                            <a href="certificado.html" target="_blank" class="btn btn-sm netflix-button-small">Ver Certificados da Área</a>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col">
+                    <div class="project-card certificate-card">
+                        <img src="certificados/sql/sql_do_zero.png" class="card-img-top" alt="Certificado HTML/CSS">
+                        <div class="card-body">
+                            <h5 class="card-title">Sql</h5>
+                            <p class="card-text-short">Conceitos de SQL com foco em consultas, filtros e manipulação de dados. Comandos como SELECT, WHERE, DROP e JOIN.<br>Carga Horária Total: <strong>6h</strong></p>
+                            <a href="certificado.html" target="_blank" class="btn btn-sm netflix-button-small">Ver Certificados da Área</a>
+                        </div>
+                    </div>
+                </div>
+            
+                </div>
+        </section>
+
+    </main>
+
+    <footer class="netflix-footer py-4">
+        <div class="container text-center">
+            <div class="social-icons mb-4">
+                <a href="https://github.com/lrMatheus" target="_blank" class="social-icon mx-3"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/matheusg-soares/" target="_blank" class="social-icon mx-3"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/5587991779963" target="_blank" class="social-icon mx-3"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <a href="curriculo/curriculo.pdf" download="Curriculo_Matheus_Gomes.pdf" class="btn netflix-button-small cv-download-button">
+                Baixar Currículo <i class="fa-solid fa-download ms-2"></i>
+            </a>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
