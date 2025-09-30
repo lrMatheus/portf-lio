@@ -1,0 +1,567 @@
+/* Importar fonte do Google Fonts (exemplo: Inter) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --netflix-black: #141414;
+    --netflix-dark-gray: #222222;
+    --netflix-medium-gray: #303030;
+    --netflix-light-gray: #808080;
+    --netflix-red: #E50914;
+    --netflix-white: #F5F5F5;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--netflix-black);
+    color: var(--netflix-white);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita scroll horizontal indesejado */
+}
+
+/* --- Header --- */
+.netflix-header {
+    background-color: var(--netflix-black);
+    padding: 30px 40px; /* Aumentei o padding para dar mais espaço nas laterais */
+    border-bottom: 1px solid var(--netflix-dark-gray);
+    text-align: left;
+}
+
+.header-profile-group {
+    display: flex;
+    flex-direction: column; /* Em colunas para mobile primeiro */
+    align-items: flex-start; /* Alinha à esquerda */
+    max-width: 1500px; /* Largura máxima para centralização em monitores grandes */
+    margin: 0; /* Remove margin auto para alinhar à esquerda */
+    margin-left: 20px;
+}
+
+
+
+.profile-pic {
+    width: 400px; /* Aumentei mais o tamanho da foto */
+    height: 500px;
+    margin-left: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--netflix-red); /* Borda vermelha mais grossa */
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.7); /* Sombra mais intensa */
+    margin-bottom: 15px; /* Espaço entre foto e nome/descrição em mobile */
+    
+}
+
+.netflix-title {
+    color: var(--netflix-red);
+    font-size: 3.5rem; /* Ainda maior */
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -2px;
+}
+
+.header-about-me {
+    color: var(--netflix-light-gray);
+    font-size: 1.2rem; /* Um pouco maior */
+    max-width: 700px; /* Maior largura para o texto */
+    margin-top: 10px; /* Espaço entre o título e a descrição */
+    line-height: 1.7;
+    text-align: left;
+}
+
+.header-about-me strong {
+    color: var(--netflix-white);
+}
+
+/* --- Banner (Carrossel) --- */
+.netflix-banner {
+    position: relative;
+    height: auto;
+    min-height: 450px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    background-color: var(--netflix-black);
+    
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    min-height: 450px;
+    max-height: 650px;
+    object-fit: contain;
+    object-position: center;
+    filter: brightness(60%);
+    background-color: var(--netflix-black);
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5%;
+    text-align: left;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: 200px;
+    z-index: 5;
+}
+
+.carousel-caption .project-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--netflix-white);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.carousel-caption .project-description {
+    font-size: 1.6rem;
+    color: var(--netflix-light-gray);
+    margin-bottom: 25px;
+    max-width: 65%;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.netflix-button {
+    background-color: var(--netflix-red);
+    color: var(--netflix-white);
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    opacity: 1;
+    transform: translateY(25px);
+    z-index: 10;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 5;
+}
+
+.netflix-button:hover {
+    background-color: #f40612;
+    transform: translateY(-3px);
+}
+
+/* Animações de entrada para o texto do carrossel */
+.carousel-item.active .animate-text-entry {
+    animation: slideInUp 0.8s ease forwards;
+}
+
+.carousel-item.active .animate-text-entry.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.carousel-item.active .animate-text-entry.delay-2 {
+    animation-delay: 0.4s;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Carrossel Indicators/Controls */
+.carousel-indicators [data-bs-target] {
+    background-color: var(--netflix-white);
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    padding: 12px;
+}
+
+/* --- Seções Gerais --- */
+.netflix-sections {
+    padding: 0 40px;
+}
+
+.section-title {
+    color: var(--netflix-white);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    border-left: 5px solid var(--netflix-red);
+    padding-left: 15px;
+}
+
+/* --- Meus Projetos (Cards Detalhados) --- */
+.project-card {
+    background-color: var(--netflix-dark-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    background-color: var(--netflix-medium-gray);
+}
+
+.project-card .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: brightness(80%);
+    transition: filter 0.3s ease;
+}
+
+.project-card:hover .card-img-top {
+    filter: brightness(100%);
+}
+
+.project-card .card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card .card-title {
+    color: var(--netflix-white);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.project-card .card-text-short { /* Descrição curta para projetos e certificados */
+    color: var(--netflix-light-gray);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Ajustes para a "Stack" renomeada para "Tecnologias" */
+.detailed-project-card .card-body p strong {
+    color: var(--netflix-white);
+    font-weight: 600;
+}
+.detailed-project-card .card-body p {
+    font-size: 0.95rem; /* Ajuste sutil para o texto de tecnologias */
+    color: var(--netflix-light-gray);
+    margin-bottom: 5px;
+}
+
+
+.netflix-button-small {
+    background-color: var(--netflix-red);
+    color: var(--netflix-white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start;
+    display: inline-flex; /* Para alinhar ícone e texto */
+    align-items: center;
+}
+
+.netflix-button-small:hover {
+    background-color: #f40612;
+    transform: translateY(-2px);
+    color: var(--netflix-white);
+}
+
+
+/* --- Habilidades Técnicas com Nível --- */
+.skill-card {
+    background-color: var(--netflix-dark-gray);
+    border-radius: 8px;
+    min-height: 140px; /* Aumentei um pouco para o nível */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    padding: 15px; /* Ajuste para espaçamento */
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    pointer-events: none;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    background-color: var(--netflix-medium-gray);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+}
+
+.skill-card:hover::before {
+    border-color: var(--netflix-red);
+}
+
+.skill-icon {
+    font-size: 4rem;
+    color: var(--netflix-red);
+    margin-bottom: 5px; /* Reduzi a margem para o nível */
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+    transform: translateY(-5px);
+}
+
+.skill-name {
+    font-size: 1.2rem; /* Um pouco maior */
+    font-weight: 500;
+    color: var(--netflix-white);
+    margin: 0;
+}
+
+.skill-level {
+    font-size: 0.9rem;
+    color: var(--netflix-light-gray);
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+/* --- Certificados --- */
+.certificate-card .card-text-short strong {
+    color: var(--netflix-white); /* Destaca a carga horária */
+}
+
+
+/* --- Footer --- */
+.netflix-footer {
+    background-color: var(--netflix-black);
+    border-top: 1px solid var(--netflix-dark-gray);
+    padding: 40px 0;
+}
+
+.social-icons .social-icon {
+    color: var(--netflix-light-gray);
+    font-size: 2.5rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.social-icons .social-icon:hover {
+    color: var(--netflix-white);
+    transform: translateY(-5px);
+}
+
+.cv-download-button {
+    margin-top: 20px;
+    background-color: var(--netflix-medium-gray); /* Cor para diferenciar do botão de projeto */
+    color: var(--netflix-white);
+    border: 1px solid var(--netflix-light-gray);
+}
+
+.cv-download-button:hover {
+    background-color: var(--netflix-dark-gray);
+    border-color: var(--netflix-white);
+}
+
+
+/* --- Responsividade (Media Queries) --- */
+@media (min-width: 768px) {
+    .netflix-header .header-profile-group {
+        flex-direction: row; /* Coloca lado a lado em desktop/tablet */
+        align-items: center;
+    }
+    .profile-pic {
+        margin-bottom: 0;
+        margin-right: 30px; /* Espaço à direita da foto em desktop */
+    }
+    .header-text-group {
+        text-align: left;
+    }
+}
+
+@media (max-width: 992px) {
+    .netflix-title {
+        font-size: 2.8rem;
+    }
+    .header-about-me {
+        font-size: 1.1rem;
+    }
+    .carousel-caption .project-title {
+        font-size: 3.5rem;
+    }
+    .carousel-caption .project-description {
+        font-size: 1.3rem;
+        max-width: 80%;
+    }
+    .netflix-banner {
+        min-height: 500px;
+    }
+    .banner-img {
+        min-height: 500px;
+    }
+    .carousel-caption {
+        min-height: 150px;
+    }
+    .section-title {
+        font-size: 2.2rem;
+    }
+    .netflix-sections {
+        padding: 0 20px;
+    }
+    .skill-icon {
+        font-size: 3rem;
+    }
+    .project-card .card-img-top {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .netflix-header {
+        padding: 20px 20px;
+        text-align: center;
+    }
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 15px;
+        margin-right: 0 !important;
+        object-fit: fill;
+
+    }
+    .netflix-title {
+        font-size: 2.5rem;
+    }
+    .header-about-me {
+        font-size: 1rem;
+        padding: 0 15px;
+        margin-top: 5px;
+    }
+    .carousel-caption {
+        background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0) 80%);
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        padding: 3%;
+    }
+    .carousel-caption .project-title {
+        font-size: 2.8rem;
+    }
+    .carousel-caption .project-description {
+        font-size: 1.1rem;
+        max-width: 90%;
+    }
+    .netflix-button {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+    .netflix-banner {
+        min-height: 400px;
+        margin-bottom: 30px;
+    }
+    .banner-img {
+        min-height: 400px;
+    }
+    .carousel-caption {
+        min-height: 120px;
+    }
+    .section-title {
+        font-size: 2rem;
+        text-align: center;
+        margin-left: 0;
+        border-left: none;
+        padding-left: 0;
+        border-bottom: 3px solid var(--netflix-red); /* Borda inferior para mobile */
+        padding-bottom: 10px;
+        display: inline-block; /* Para a borda inferior se ajustar ao texto */
+    }
+    .skill-card {
+        min-height: 120px;
+    }
+    .skill-icon {
+        font-size: 2.8rem;
+    }
+    .skill-name {
+        font-size: 1rem;
+    }
+    .skill-level {
+        font-size: 0.8rem;
+    }
+    .project-card .card-img-top {
+        height: 160px;
+    }
+    .social-icons .social-icon {
+        font-size: 2rem;
+        margin: 0 15px;
+    }
+    .cv-download-button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .netflix-title {
+        font-size: 2rem;
+    }
+    .header-about-me {
+        font-size: 0.85rem;
+    }
+    .carousel-caption .project-title {
+        font-size: 2.2rem;
+    }
+    .carousel-caption .project-description {
+        font-size: 0.9rem;
+    }
+    .netflix-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .skill-icon {
+        font-size: 2.5rem;
+    }
+    .skill-name {
+        font-size: 0.9rem;
+    }
+    .project-card .card-title {
+        font-size: 1.3rem;
+    }
+    .project-card .card-text-short, .detailed-project-card .project-details {
+        font-size: 0.85rem;
+    }
+    .netflix-button-small {
+        font-size: 0.85rem;
+        padding: 7px 12px;
+    }
+    .social-icons .social-icon {
+        font-size: 1.8rem;
+        margin: 0 10px;
+    }
+}
+
+
